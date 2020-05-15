@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/progressOne"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:tooltipText="loading image"
+        app:layout_constraintBottom_toBottomOf="@id/firstImageView"
+        app:layout_constraintEnd_toEndOf="@id/firstImageView"
+        app:layout_constraintStart_toStartOf="@id/firstImageView"
+        app:layout_constraintTop_toTopOf="@id/firstImageView" />
+
+    <ImageView
+        android:id="@+id/firstImageView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:minWidth="40dp"
+        android:minHeight="40dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <ProgressBar
+        android:id="@+id/progressTwo"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:tooltipText="loading image"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/secondImageView"
+        app:layout_constraintEnd_toEndOf="@id/secondImageView"
+        app:layout_constraintStart_toStartOf="@id/secondImageView"
+        app:layout_constraintTop_toTopOf="@id/secondImageView" />
+
+    <ImageView
+        android:id="@+id/secondImageView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:minWidth="40dp"
+        android:minHeight="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/buttonFirst"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:text="@string/fetch_image_one"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/firstImageView" />
+
+    <Button
+        android:id="@+id/buttonSecond"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:text="@string/fetch_image_two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/secondImageView" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

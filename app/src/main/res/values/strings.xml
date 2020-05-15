@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">WorkerService</string>
+    <string name="fetch_image_two">Fetch Image Two</string>
+    <string name="fetch_image_one">Fetch Image One</string>
+    <string name="network_not_available">Please check the network</string>
+</resources>
