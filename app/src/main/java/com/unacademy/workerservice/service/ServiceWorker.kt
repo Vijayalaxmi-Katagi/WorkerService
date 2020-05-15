@@ -23,7 +23,5 @@ class ServiceWorker(name: String,threadList:ArrayList<Thread>):Runnable {
     fun addTask(taskCallback : Task<Bitmap>){
         this.taskCallback=taskCallback
         thread?.start()
-
     }
 }
-git
